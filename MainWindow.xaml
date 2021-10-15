@@ -1,0 +1,43 @@
+﻿<Window x:Class="AutoCeiling.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AutoCeiling"
+             mc:Ignorable="d" 
+             WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+             Title="LendakBIM"
+             Height="220" Width="600">
+
+    <Border Padding="5">
+        <GroupBox Header="Select Celing Type and Ceiling Height" >
+            <StackPanel>
+                <Grid Height="50" Margin="0 10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Ceiling Type:" Margin=" 10 2" Padding="2" VerticalAlignment="Center" FontSize="13"/>
+                        <ComboBox ItemsSource="{Binding TypeCollection}" Height="30" Width="120" VerticalContentAlignment="Center" FontSize="13" x:Name="textCeilingType" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <TextBlock Text="Ceiling Height (mm):" Margin=" 10 2" VerticalAlignment="Center" FontSize="13"/>
+                        <TextBox x:Name="textHeight" Height="30" Width="80" VerticalContentAlignment="Center" FontSize="13"/>
+                    </StackPanel>
+                </Grid>
+
+                <!--Buttons-->
+                <Grid Height="50" Margin="0 15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Margin="40 10 40 10" Grid.Column="0" x:Name="button1" Click="button1_Click">Select Rooms / Create Ceilings</Button>
+                    <Button Margin="40 10 40 10" Grid.Column="1" x:Name="button2" Click="button2_Click">Close</Button>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+    </Border>
+    
+</Window>
