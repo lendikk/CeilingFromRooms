@@ -1,5 +1,6 @@
 # CeilingFromRooms
 Revit add-in that creates ceiling based on selected rooms. User inputs the ceiling type and ceiling height.
+Python script included for use through PyRevit.
 # Installation
 No compiled DLL is provided. This repository hosts the source code only. You can compile your own DLL.
 
